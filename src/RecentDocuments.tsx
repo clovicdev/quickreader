@@ -107,13 +107,6 @@ export default function RecentDocuments({
           Documents you open will be saved here on this browser.
         </p>
       )}
-
-      {entries.length > 0 && (
-        <p className="history-footnote">
-          Reopen a document to continue saved edits. Downloads use the latest
-          edited copy when available; otherwise they save the original.
-        </p>
-      )}
     </section>
   )
 }

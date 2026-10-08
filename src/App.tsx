@@ -1238,12 +1238,14 @@ function App() {
               </div>
             )}
           </motion.div>
-          <RecentDocuments
-            entries={historyEntries}
-            notice={historyNotice}
-            onOpen={(entry) => void openHistoryEntry(entry)}
-            onRemove={(id) => void deleteHistoryEntry(id)}
-          />
+          {historyEntries.length > 0 && (
+            <RecentDocuments
+              entries={historyEntries}
+              notice={historyNotice}
+              onOpen={(entry) => void openHistoryEntry(entry)}
+              onRemove={(id) => void deleteHistoryEntry(id)}
+            />
+          )}
           {isDragActive && (
             <div className="drop-overlay">
               <div>
