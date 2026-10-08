@@ -771,7 +771,11 @@ function App() {
       ) : (
         <header className="welcome-toolbar">
           <a className="wordmark" href="#top" aria-label="QuickReader home">
-            <img className="wordmark-logo" src="/quickreader-logo.png" alt="" />
+            <img
+              className="wordmark-logo"
+              src={`${import.meta.env.BASE_URL}quickreader-logo.png`}
+              alt=""
+            />
           </a>
           <div className="welcome-actions">
             <span className="privacy-note">Files stay on this device</span>
